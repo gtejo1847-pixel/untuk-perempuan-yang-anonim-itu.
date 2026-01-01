@@ -1,5 +1,4 @@
 # untuk-perempuan-yang-anonim-itu.
-<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
@@ -97,6 +96,25 @@ tapi untuk percaya.
       setTimeout(() => heart.remove(), 5000);
     }
     setInterval(createHeart, 500);
+     // MUSIK PLAY / PAUSE (AMAN)
+    const music = document.getElementById("music");
+    const btn = document.getElementById("playBtn");
+    let isPlaying = false;
+
+    btn.addEventListener("click", async () => {
+      try {
+        if (!isPlaying) {
+          await music.play();
+          btn.innerText = "⏸ Hentikan Musik";
+        } else {
+          music.pause();
+          btn.innerText = "▶ Putar Musik";
+        }
+        isPlaying = !isPlaying;
+      } catch (e) {
+        alert("Klik sekali lagi untuk memulai musik 🎵");
+      }
+    });
   </script>
 </body>
 </html>
