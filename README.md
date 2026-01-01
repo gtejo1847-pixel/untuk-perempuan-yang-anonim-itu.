@@ -118,7 +118,7 @@ tapi untuk percaya.
         }
         isPlaying = !isPlaying;
       } catch (e) {
-        alert("Klik sekali lagi untuk memulai musik 🎵");
+        alert("Klik 🎵");
       }
     });
   </script>
