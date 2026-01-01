@@ -1,4 +1,5 @@
 # untuk-perempuan-yang-anonim-itu.
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
@@ -33,7 +34,17 @@
       color: #333;
     }
 
-    /* Animasi kartu */
+    button {
+      margin-top: 20px;
+      background: #c94f7c;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: scale(0.9); }
       to { opacity: 1; transform: scale(1); }
@@ -43,7 +54,6 @@
       to { transform: translateY(0); opacity: 1; }
     }
 
-    /* Hati jatuh */
     .heart {
       position: fixed;
       top: -10px;
@@ -59,11 +69,13 @@
     }
   </style>
 </head>
+
 <body>
+
   <div class="card">
-    <h1>Untukmu 🌹</h1>
+    <h1>Untukmu </h1>
     <p>
-      Aku pernah patah,
+     Aku pernah patah,
 bukan karena cinta itu salah,
 tapi karena aku terlalu percaya
 pada hal yang belum tentu tinggal.
@@ -81,17 +93,19 @@ mungkin aku akan berani lagi,
 bukan untuk jatuh,
 tapi untuk percaya.
     </p>
+
+    <button id="playBtn">▶ Putar Musik</button>
+
     <p>— Djati</p>
   </div>
-<!-- AUDIO -->
+
+  <!-- AUDIO -->
   <audio id="music" preload="auto" loop>
     <source src="MP3" type="mpeg">
   </audio>
 
   <script>
-
-  <script>
-    // Membuat hati jatuh
+    // HATI JATUH
     function createHeart() {
       const heart = document.createElement("div");
       heart.className = "heart";
@@ -102,7 +116,8 @@ tapi untuk percaya.
       setTimeout(() => heart.remove(), 5000);
     }
     setInterval(createHeart, 500);
-     // MUSIK PLAY / PAUSE (AMAN)
+
+    // MUSIK PLAY / PAUSE (AMAN)
     const music = document.getElementById("music");
     const btn = document.getElementById("playBtn");
     let isPlaying = false;
@@ -118,9 +133,11 @@ tapi untuk percaya.
         }
         isPlaying = !isPlaying;
       } catch (e) {
-        alert("Klik 🎵");
+        alert("Klik sekali lagi untuk memulai musik 🎵");
       }
     });
   </script>
+
 </body>
 </html>
+
