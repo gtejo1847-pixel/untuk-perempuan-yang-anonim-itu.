@@ -83,6 +83,12 @@ tapi untuk percaya.
     </p>
     <p>— Djati</p>
   </div>
+<!-- AUDIO -->
+  <audio id="music" preload="auto" loop>
+    <source src="MP3" type="mpeg">
+  </audio>
+
+  <script>
 
   <script>
     // Membuat hati jatuh
